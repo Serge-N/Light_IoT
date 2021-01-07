@@ -4,6 +4,7 @@ body,
 .room {
   height: 100%;
   margin: 0;
+  align-content: center;
 }
 .lit {
   background-color: white;

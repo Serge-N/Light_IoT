@@ -6,7 +6,7 @@ const rootElement = document.getElementById("root");
 
 const Room = () => {
   const [isLit, setLit] = React.useState(false);
-  const [temperature, control] = React.useState(22);
+  let [temperature, control] = React.useState(22);
 
   const brightness = isLit ? "lit" : "dark";
 
@@ -20,6 +20,8 @@ const Room = () => {
       <button onClick={() => setLit(1)}>ON</button>
       <button onClick={() => setLit(0)}>OFF</button>
       <br />
+      <button onClick={() => control(temperature++)}>+</button>
+      <button onClick={() => control(temperature--)}>-</button>
     </div>
   );
 };
